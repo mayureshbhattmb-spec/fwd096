@@ -1,0 +1,83 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Georgia, serif;
+    color: #14233a;
+    line-height: 1.6;
+  }
+
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header { border-bottom: 1px solid #c9ddf2; padding: 10px 0; }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo img { height: 55px; }
+  .logo span { font-size: 18px; font-weight: bold; color: #0a2a4d; }
+  nav a { margin-left: 20px; color: #0a2a4d; text-decoration: none; }
+  nav a:hover { color: #0b5fb0; }
+
+  /* Hero */
+  .hero { background: #0b5fb0; color: white; text-align: center; padding: 80px 20px; }
+  .hero h1 { font-size: 42px; margin-bottom: 15px; }
+  .hero p { max-width: 600px; margin: 0 auto 25px; font-size: 18px; }
+
+  .btn {
+    display: inline-block;
+    background: #f2a900;
+    color: #0a2a4d;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn:hover { background: #ffc233; }
+
+  /* Sections */
+  section { padding: 60px 0; }
+  h2 { text-align: center; color: #0a2a4d; font-size: 30px; margin-bottom: 30px; }
+
+  /* Club cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: #eaf2fb; padding: 22px; border-radius: 8px; }
+  .card h3 { color: #0a2a4d; margin-bottom: 8px; }
+  .card p { font-size: 15px; margin-bottom: 10px; }
+  .card .date { font-size: 14px; color: #0b5fb0; font-weight: bold; }
+
+  /* Steps */
+  .steps-section { background: #eaf2fb; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+  .step h3 { color: #0b5fb0; margin-bottom: 6px; }
+
+  /* Footer */
+  footer { background: #0a2a4d; color: white; text-align: center; padding: 25px 20px; }
+
+  /* Functional portal UI — keeps the original visual theme */
+  .portal-panel { display:none; margin: 28px auto 0; max-width: 850px; text-align:left; background:#fff; border:1px solid #c9ddf2; border-radius:8px; padding:22px; box-shadow:0 8px 24px rgba(10,42,77,.08); }
+  .portal-panel.visible { display:block; }
+  .portal-panel h3 { color:#0a2a4d; margin-bottom:12px; }
+  .portal-form { display:grid; gap:12px; }
+  .portal-form input, .portal-form select, .portal-form textarea { width:100%; padding:11px; border:1px solid #b8cbe0; border-radius:5px; font:inherit; color:#14233a; }
+  .portal-form label { font-weight:bold; font-size:14px; }
+  .portal-form button, .small-btn { border:0; cursor:pointer; background:#0b5fb0; color:white; padding:10px 16px; border-radius:5px; font-weight:bold; font:inherit; }
+  .small-btn.secondary { background:#eaf2fb; color:#0a2a4d; }
+  .portal-actions { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+  .portal-message { margin:10px 0; font-size:14px; }
+  .portal-message.error { color:#b42318; }
+  .portal-message.success { color:#167044; }
+  .application-item { border:1px solid #c9ddf2; border-radius:6px; padding:14px; margin:10px 0; background:#f8fbff; }
+  .status { display:inline-block; padding:2px 9px; border-radius:12px; background:#eaf2fb; color:#0a2a4d; font-size:13px; font-weight:bold; }
+  .portal-hidden { display:none !important; }
+  @media (max-width: 700px) {
+    header .container { flex-direction: column; gap: 10px; }
+    .cards, .steps { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+  }
+
+
+/* CSS-only sign-in disclosure: opens the sign-in panel below the button. */
+.auth-disclosure { margin: 0 auto; max-width: 850px; }
+.auth-disclosure > summary { cursor: pointer; list-style: none; }
+.auth-disclosure > summary::-webkit-details-marker { display: none; }
+.auth-disclosure[open] > .portal-panel { display: block; }
+.auth-disclosure[open] > summary { border-radius: 5px 5px 0 0; }
