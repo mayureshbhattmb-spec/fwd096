@@ -74,10 +74,7 @@
     .hero h1 { font-size: 30px; }
   }
 
-
-/* CSS-only sign-in disclosure: opens the sign-in panel below the button. */
-.auth-disclosure { margin: 0 auto; max-width: 850px; }
-.auth-disclosure > summary { cursor: pointer; list-style: none; }
-.auth-disclosure > summary::-webkit-details-marker { display: none; }
-.auth-disclosure[open] > .portal-panel { display: block; }
-.auth-disclosure[open] > summary { border-radius: 5px 5px 0 0; }
+.club-tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.club-tools input,.club-tools select{flex:1;min-width:180px;padding:10px;border:1px solid #b8cbe0;border-radius:5px;font:inherit;color:#14233a}
+.save-club{margin-top:8px;font-size:14px!important;padding:7px 12px!important}
+.card[hidden]{display:none}
