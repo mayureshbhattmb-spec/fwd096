@@ -31,36 +31,42 @@
 <section id="clubs">
   <div class="container">
     <h2>Clubs and Societies</h2>
+    <div class="club-tools">
+      <input id="clubSearch" type="search" placeholder="Search clubs..." aria-label="Search clubs">
+      <select id="clubCategory" aria-label="Filter clubs"><option value="all">All clubs</option><option value="tech">Technology</option><option value="arts">Arts & culture</option><option value="sports">Sports</option><option value="social">Social impact</option></select>
+      <button class="small-btn" id="showSaved" type="button">Saved clubs <span id="savedCount">0</span></button>
+    </div>
+    <p id="clubResultCount" class="portal-message" aria-live="polite"></p>
     <div class="cards" id="clubCards">
-      <div class="card">
+      <div class="card" data-category="tech">
         <h3>Coding & Robotics Club</h3>
         <p>Hack nights, workshops and hackathons for tech lovers.</p>
-        <div class="date">Closes 20 Oct</div>
+        <div class="date">Closes 20 Oct</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
-      <div class="card">
+      <div class="card" data-category="arts">
         <h3>Debating Society</h3>
         <p>Inter-university debates and public speaking sessions.</p>
-        <div class="date">Closes 25 Oct</div>
+        <div class="date">Closes 25 Oct</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
-      <div class="card">
+      <div class="card" data-category="arts">
         <h3>Cultural Society</h3>
         <p>Celebrating festivals and traditions from across South Asia.</p>
-        <div class="date">Closes 30 Oct</div>
+        <div class="date">Closes 30 Oct</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
-      <div class="card">
+      <div class="card" data-category="arts">
         <h3>Photography & Film Club</h3>
         <p>Photo walks, short films and campus event coverage.</p>
-        <div class="date">Closes 28 Oct</div>
+        <div class="date">Closes 28 Oct</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
-      <div class="card">
+      <div class="card" data-category="sports">
         <h3>Sports Society</h3>
         <p>Cricket, football, badminton and yoga for all levels.</p>
-        <div class="date">Closes 5 Nov</div>
+        <div class="date">Closes 5 Nov</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
-      <div class="card">
+      <div class="card" data-category="social">
         <h3>Social Outreach Cell</h3>
         <p>Volunteering and awareness drives in the community.</p>
-        <div class="date">Opens 1 Nov</div>
+        <div class="date">Opens 1 Nov</div><button type="button" class="small-btn save-club">☆ Save club</button>
       </div>
     </div>
   </div>
@@ -82,9 +88,9 @@
   <div class="container">
     <h2>Ready to Join?</h2>
     <p style="margin-bottom:20px;">Sign in with your South Asian University email to start applying.</p>
-    <details class="auth-disclosure">
-      <summary class="btn">Sign In / Register</summary>
-      <div class="portal-panel" id="authPanel" aria-live="polite">
+    <a class="btn" href="#" id="signInButton">Sign In / Register</a>
+    <p id="sessionMessage" style="margin-top:14px;"></p>
+    <div class="portal-panel" id="authPanel" aria-live="polite">
       <h3 id="authHeading">Student sign in</h3>
       <p style="margin-bottom:14px;">Use your student account to apply to clubs and track your applications.</p>
       <div class="portal-actions">
@@ -98,9 +104,7 @@
         <button type="submit" class="btn" id="authSubmit">Sign in</button>
       </form>
       <p id="authMessage" class="portal-message"></p>
-      </div>
-    </details>
-    <p id="sessionMessage" style="margin-top:14px;"></p>
+    </div>
     <div class="portal-panel" id="studentPanel" aria-live="polite">
       <h3 id="welcomeHeading">Your student dashboard</h3>
       <div class="portal-actions"><button type="button" class="small-btn" id="refreshApplications">Refresh applications</button><button type="button" class="small-btn secondary" id="logoutButton">Sign out</button></div>
@@ -127,5 +131,6 @@
   <p>South Asian University, New Delhi | Student Affairs Office</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
