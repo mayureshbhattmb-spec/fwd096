@@ -1,0 +1,28 @@
+
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.cockroachdb.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
